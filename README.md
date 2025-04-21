@@ -52,9 +52,9 @@ docker-compose up --build
 
 ✅ Visit in your browser:
 
-Frontend (UI): http://localhost:8000
-
-Backend (API only): http://localhost:3000 (No need to open in browser)
+    Frontend (UI): http://localhost:8000
+    
+    Backend (API only): http://localhost:3000 (No need to open in browser)
 
 
 ## 🧪 Running Backend Unit Tests (RSpec)
