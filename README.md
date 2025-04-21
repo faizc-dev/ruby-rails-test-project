@@ -57,7 +57,7 @@ docker-compose up --build
 
 ## 🧪 Running Backend Unit Tests (RSpec)
 
-The backend uses RSpec for unit testing. All tests are located in the backend/spec directory.
+The backend uses RSpec for unit testing. All tests are located in the ```backend/spec``` directory.
 
 ### Step 1: Find the backend container
 ```
