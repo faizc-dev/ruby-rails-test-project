@@ -54,26 +54,11 @@ docker-compose up --build
 
     Backend: http://localhost:3000
 
-🧪 Running Backend Unit Tests
-Step 1: Find the running backend container
 
-docker ps
+## 🧪 Running Backend Unit Tests (RSpec)
 
-Look for a container like ruby_rails_test-backend-1.
-Step 2: Access the backend container
+The backend uses RSpec for unit testing. All tests are located in the backend/spec directory.
 
-docker exec -it ruby_rails_test-backend-1 bash
-
-Step 3: Run tests using RSpec
-
-bundle exec rspec
-Step 3: Access the application
-
-    Frontend: http://localhost:8000
-
-    Backend: http://localhost:3000
-
-## 🧪 Running Backend Unit Tests
 ### Step 1: Find the backend container
 ```
 docker ps
