@@ -33,13 +33,12 @@ cd ruby-rails-test-project
 ```
 
 #### Step 2: Check out to the latest branch (if applicable)
-Before proceeding, ensure that Docker and Docker Compose are installed on your system.
+
 ```
 git checkout main
 ```
-make sure c=docker is installed
 #### Step 3: Shut down any previous containers (if running)
-
+Before proceeding, ensure that Docker and Docker Compose are installed on your system.
 ```
 docker-compose down -v
 ```
