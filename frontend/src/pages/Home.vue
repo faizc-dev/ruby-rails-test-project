@@ -4,7 +4,7 @@
 
     <!-- Message after user creation -->
     <div v-if="createdMessage" class="success-message">
-      🎉 User successfully created on refresh!
+       New user creates on every refresh
     </div>
 
     <!-- Loading state -->
@@ -15,7 +15,7 @@
       <div class="user-header">User Information</div>
       <div class="user-info">
         <div><strong>UUID:</strong> {{ uuid }}</div>
-        <div><strong>Name:</strong> {{ user?.name + user?.id }}</div>
+        <div><strong>Name:</strong> {{ user?.name +' '+ user?.id }}</div>
         <div><strong>Biography:</strong> {{ user?.biography }}</div>
         <div><strong>ID:</strong> {{ user?.id }}</div>
         <div><strong>Tone:</strong> {{ tone || 'Detecting...' }}</div>
@@ -71,7 +71,7 @@ const createUser = async () => {
 // Fetch user details
 const fetchUser = async () => {
   try {
-    const res = await api.user.getUser({ id: 1 })
+    const res = await api.user.getUser()
     user.value = res
   } catch {
     error.value = 'Failed to fetch user'
@@ -121,7 +121,7 @@ onMounted(async () => {
 /* Success message */
 .success-message {
   text-align: center;
-  color: #2ecc71;
+  color: #0a7ce6;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 20px;
