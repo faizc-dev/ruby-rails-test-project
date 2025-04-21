@@ -24,16 +24,49 @@ This is a fullstack application that demonstrates user creation, tone detection,
 
 ---
 
-## 🚀 Running the Application
+### Step 1: Clone the repository
+```
+git clone git@github.com:faizc-dev/ruby-rails-test-project.git
+cd ruby-rails-test-project
+```
 
-### Step 1: Shut down any existing containers
-```bash
+#### Step 2: Check out to the latest branch (if applicable)
+```
+git checkout main
+```
+
+#### Step 3: Shut down any previous containers (if running)
+
+```
 docker-compose down -v
 ```
-### Step 2: Build and start the application
-```bash
+
+#### Step 4: Build and start the application
+
+```
 docker-compose up --build
 ```
+
+
+✅ Visit in your browser:
+
+    Frontend: http://localhost:8000
+
+    Backend: http://localhost:3000
+
+🧪 Running Backend Unit Tests
+Step 1: Find the running backend container
+
+docker ps
+
+Look for a container like ruby_rails_test-backend-1.
+Step 2: Access the backend container
+
+docker exec -it ruby_rails_test-backend-1 bash
+
+Step 3: Run tests using RSpec
+
+bundle exec rspec
 Step 3: Access the application
 
     Frontend: http://localhost:8000
