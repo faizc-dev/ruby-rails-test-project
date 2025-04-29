@@ -6,13 +6,11 @@ export default {
   id: {
     getId(): Promise<{id: string}>{ return request('get', '/id/get_id', {}) },
   },
+  tone: {
+    getTone(): Promise<{tone: string}>{ return request('get', '/tone/get_tone', {}) },
+  },
   user: {
     createUser(params: {name: string, biography: string}): Promise<{status: string, user: {id: number, name: string, biography: string}}>{ return request('post', '/user/create_user', params) },
     getUser(): Promise<{id: number, name: string, biography: string}>{ return request('get', '/user/get_user', {}) },
   },
-  tone: {
-    getTone(): Promise<{tone: string}> {
-      return request('get', '/tone/get_tone', {})
-    }
-  }
 }

@@ -2,9 +2,14 @@
   <div class="container">
     <h1 class="title">Fullstack Assessment - Vue + Rails</h1>
 
+    <!-- Refresh Button -->
+    <div class="refresh-button-container">
+      <button class="refresh-button" @click="refreshPage">Refresh</button>
+    </div>
+
     <!-- Message after user creation -->
     <div v-if="createdMessage" class="success-message">
-       New user creates on every refresh
+      New user creates on every refresh
     </div>
 
     <!-- Loading state -->
@@ -15,7 +20,7 @@
       <div class="user-header">User Information</div>
       <div class="user-info">
         <div><strong>UUID:</strong> {{ uuid }}</div>
-        <div><strong>Name:</strong> {{ user?.name +' '+ user?.id }}</div>
+        <div><strong>Name:</strong> {{ user?.name + ' ' + user?.id }}</div>
         <div><strong>Biography:</strong> {{ user?.biography }}</div>
         <div><strong>ID:</strong> {{ user?.id }}</div>
         <div><strong>Tone:</strong> {{ tone || 'Detecting...' }}</div>
@@ -88,6 +93,11 @@ const fetchTone = async () => {
   }
 }
 
+// Refresh the page
+const refreshPage = () => {
+  window.location.reload()
+}
+
 // Initialize on mount
 onMounted(async () => {
   await fetchUUID()
@@ -115,7 +125,29 @@ onMounted(async () => {
   text-align: center;
   font-size: 2.5rem;
   color: #4CAF50;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+/* Refresh button container */
+.refresh-button-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Refresh button */
+.refresh-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+  background-color: #45a049;
 }
 
 /* Success message */
